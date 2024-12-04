@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <script>
+        const fruits=['apple',"melons","papaya","mango"]
+        console.log(fruits)
+        fruits.push("Orange")
+        console.log(fruits)
+        fruits.pop()
+        console.log(fruits)
+
+        fruits.unshift("Banana")
+        console.log(fruits)
+        fruits.shift()
+        console.log(fruits)
+        
+        const reversedFruits=fruits.reverse()
+        console.log(reversedFruits)
+
+        fruits.sort()
+        console.log(fruits)
+    
+        const descendedFruits=fruits.reverse()
+        console.log(descendedFruits)
+
+        const fruits1 = [`apple`,"banana","chiku","dragon fruit","melons","papaya","mango"]
+        const slicedFruits1=fruits1.slice(2,5)
+        console.log("This is sliced fruits",slicedFruits1)
+        const spliceData=fruits1.splice(2,2,"oranges","pineapple")
+        console.log("This is spliced date",fruits1)
+
+        
+
+
+
+
+        for(i=0; i<fruits.length ; i++) {
+         console.log("I like to eat",fruits[i])
+        }
+
+        for(i=0; i<fruits.length ; i++) {
+         console.log(`I like ${fruits[i]} to eat `)
+        }
+
+        // let i=0
+        // while(i<fruits.length){
+        //     console.log(`I like ${fruits[i]}  to eat`)
+        //     i++;
+        // }
+
+        // for in
+        console.log("Printing fruits using for in loop")
+        for(let x in fruits){
+            console.log(fruits[x])
+        }
+
+        //map
+        console.log("Printing fruits using map")
+        const newFruits=fruits.map((item)=>{
+            console.log(item)
+        })
+        
+        //for each
+        console.log("Printing fruits using each")
+        fruits.forEach((item)=>{
+            console.log(item)
+        })
+
+        const agess=[14,23,54,107,33,67,12,11,9,44]
+        const voters=agess.filter((age)=>age>17)
+        console.log(voters)
+
+
+
+        const student={
+            name:"Rahul",
+            age0:19,
+            class:"XII",
+            rollNo:12,
+            address:{
+                state:"Nagaland",
+                city:"Kohima",
+                pincode:"87211",
+                landmark:"Mountain"
+            }
+        }
+
+    console.log(student.name)
+    console.log(student.age0)
+    console.log(student.address.state)
+
+        const restaurant={
+            Name:"Pizza99",
+            YAS:"2019" ,
+            Numberofemployees:22,
+            Timing:{
+                Opening:"9:00AM",
+                Closing:"11:00PM",
+            },
+            Address:{sec:104,
+            State:"Haryana",
+            pincode:"12332",
+            landmark:"DLF",
+        }
+    }
+
+        let cars=["audi","mercedis","Tata","Jaguar"]
+        let bikes=["TVS","Apache","R15","Bullet","Splender"]
+
+        let vehicles=[...cars,...bikes]
+        console.log(vehicles)
+
+        //REST OPERETOR
+
+        const addTheNumbers=(...rest)=>{
+            const size=rest.length
+            let sum=0;
+            for(let i=0;i<size;i++){
+                sum+=rest[i]
+            }
+            console.log(sum)
+        }
+        
+        addTheNumbers(1,2,3,34,545,23,33,102,87,99,1055)
+
+
+
+
+        // const age=[8,11,14,23,35,45,43,55,57,67,75,86,7,99]
+        // console.log('This is the shorted (asending order)ages',ages.sort((a,b)=>a-b))
+        // console.log('This is the shorted (decending order)ages',ages.sort((a,b)=>b-a))
+
+    </script>
+    
+</body>
+</html>
